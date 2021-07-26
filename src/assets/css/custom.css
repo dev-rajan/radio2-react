@@ -1,0 +1,152 @@
+.slide-box .item {
+    display: block !important;
+}
+
+.artist,
+.featured,
+.rjs,
+.prog {
+    margin-top: 40px;
+}
+
+.rjs .items img {
+    height: 150px !important;
+}
+
+.inner-page .page-title-big {
+    background: url(../../assets/images/about-bg.jpg) no-repeat center center !important;
+}
+
+.artist-slider .items .main-title,
+.prog-slider-right .items .main-title,
+.artist-slider-right .items .subline,
+.prog-slider-right .items .subline {
+    color: #aaa;
+    display: block;
+    font-size: 16px;
+    line-height: 22px;
+    padding: 20px 20px 0 20px;
+}
+
+.artist-slider .items .description,
+.prog-slider-right .items .description,
+.artist-slider-right .items .section.home-about.home-testimonials .item .address-line,
+.section.home-about.home-testimonials .item .artist-slider-right .items .address-line,
+.prog-slider-right .items .section.home-about.home-testimonials .item .address-line,
+.section.home-about.home-testimonials .item .prog-slider-right .items .address-line {
+    color: #989898;
+    display: block;
+    font-size: 14px;
+    line-height: 22px;
+    margin-top: 5px;
+    font-family: "Poppins", sans-serif;
+    padding: 0 20px 20px 20px !important;
+}
+
+.artist-slider .items .more-btn,
+.prog-slider-right .items .more-btn {
+    background: none;
+    border: 1px solid #FE3761;
+    display: table;
+    margin-top: 15px;
+    margin-left: 20px;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #FE3761;
+    line-height: 18px;
+}
+
+.artist .owl-prev,
+.featured .owl-prev,
+.rjs .owl-prev,
+.artist-slider .owl-prev,
+.prog-slider-right .owl-prev {
+    padding: 0 !important;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 35%;
+    left: -20px;
+    margin: 0 !important;
+    line-height: 33px;
+    font-size: 10px !important;
+    background: rgba(254, 55, 97, 0.5) !important;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-radius: 100px;
+    color: white !important;
+}
+
+.artist .owl-next,
+.featured .owl-next,
+.rjs .owl-next,
+.artist-slider .owl-next,
+.prog-slider-right .owl-next {
+    padding: 0 !important;
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    top: 35%;
+    right: -20px;
+    margin: 0 !important;
+    line-height: 33px;
+    font-size: 10px !important;
+    background: rgba(254, 55, 97, 0.5) !important;
+    -webkit-transform: translate(0, -50%);
+    -moz-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    -o-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    -ms-border-radius: 100px;
+    border-radius: 100px;
+    color: white !important;
+}
+
+.artist:hover .owl-prev,
+.featured:hover .owl-prev,
+.rjs:hover .owl-prev,
+.artist-slider:hover .owl-prev,
+.prog-slider-right:hover .owl-prev {
+    background: #fe3761 !important;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.artist:hover .owl-next,
+.featured:hover .owl-next,
+.rjs:hover .owl-next,
+.artist-slider:hover .owl-next,
+.prog-slider-right:hover .owl-next {
+    background: #fe3761 !important;
+    -webkit-transition: 0.3s ease-in-out;
+    -moz-transition: 0.3s ease-in-out;
+    -o-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-none .owl-nav{
+    display: none !important;
+}
+
+.d-nav .owl-nav{
+    display: block !important;
+}

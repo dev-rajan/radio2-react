@@ -1,0 +1,1192 @@
+                            @import 'variables';
+                            @import 'mixins';
+                            // sliderbox
+                            .slide-box {
+                                float: left;
+                                width: $full-width;
+                                position: relative;
+                                height: calc(100vh - 110px);
+                                background:$dark-gray;
+                                
+                                // & .overlay-box {
+                                //     background: rgba(2, 0, 0, 0.5);
+                                //     position: absolute;
+                                //     top: 0;
+                                //     right: 0;
+                                //     width: $full-width;
+                                //     height: 100%;
+                                // }
+                                & .item {
+                                    position: relative;
+                                    height: calc(100vh - 110px);
+                                    display:none;
+                                    width:$full-width;
+                                    img {
+                                        height: calc(100vh - 110px);
+                                        object-fit:cover;
+                                        width:$full-width;
+                                    }
+                                }
+                                // a {
+                                //     width:$full-width;
+                                //     height:$full-width;
+                                //     position:absolute;
+                                //     top:0;
+                                //     left:0;
+                                //     z-index:1;
+                                // }
+
+                                a {
+                                    display:table;
+                                    width:$full-width;
+                                }
+
+                               
+                                .owl-theme .owl-controls {
+                                    height: 0;
+                                    bottom: 28px;
+                                    top: inherit;
+                                    position: absolute;
+                                    margin: 0;
+                                    left:0;
+                                    right:inherit;
+
+                                }
+                                .owl-theme .owl-dots {
+                                    bottom:0;
+                                    top: inherit;
+                                    position:absolute;
+                                    left:102px;
+                                    right:inherit;
+                                }
+                                .owl-dots .owl-dot span {
+                                    width: 4px !important;
+                                    height: 4px !important;
+                                    background: #B2B5B5;
+                                    @include transition(.3s ease-in-out);
+                                }
+                                .owl-dot.active span {
+                                    background: $white-bg !important;
+                                    width: 26px !important;
+                                    height: 4px !important;
+                                    @include transition(.3s ease-in-out);
+                                }
+                                .owl-item.active .captionbox {
+                                    @include animation (fadeInUp 500ms linear 500ms both);
+                                }
+                                .captionbox {
+                                    padding: 70px;
+                                    position: absolute;
+                                    bottom:0;
+                                    left:0;
+                                    font-size: 19px;
+                                    width: $full-width;
+                                    background-image: -moz-linear-gradient(to bottom,rgba(0,0,0,0) 0, rgba(0,0,0,0.6) 50%, rgba(0,0,0,.9) 100%);
+                                    background-image: -ms-linear-gradient(to bottom,rgba(0,0,0,0) 0, rgba(0,0,0,0.6) 50%, rgba(0,0,0,.9) 100%);
+                                    background-image: -o-linear-gradient(to bottom,rgba(0,0,0,0) 0, rgba(0,0,0,0.6) 50%, rgba(0,0,0,.9) 100%);
+                                    background-image: -webkit-linear-gradient(to bottom,rgba(0,0,0,0) 0, rgba(0,0,0,0.6) 50%, rgba(0,0,0,.9) 100%);
+                                    background-image: -webkit-gradient(linear, center top, center bottom, from(rgba(0,0,0,0)), to(rgba(0,0,0,0.9)));
+                                    background-image: linear-gradient(to bottom,rgba(0,0,0,0) 0, rgba(0,0,0,0.6) 50%, rgba(0,0,0,.9) 100%);
+                                    & .container {
+                                       
+                                        & .overlays-box {
+                                            float:left;
+                                        }
+                                    }
+                                    
+                                    & .maintitle {
+                                        color: $white-bg;
+                                        display: block;
+                                        margin: 0;
+                                        font-size: 90px;
+                                        font-weight: $bold;
+                                        line-height: 94px;
+                                        margin-right: 0;
+                                        padding: 30px;
+                                        max-width: 830px;
+                                        margin:0;
+                                        letter-spacing:-2px;
+                                        font-family: $primary-font;
+                                        text-shadow:0 1px 1px $dark-gray;
+                                        strong, b {
+                                            color:$red-bg;
+                                        }
+                                        
+                                    }
+
+                                    & .description {
+                                        font-size:16px;
+                                        line-height:24px;
+                                        color:#B2B5B5;
+                                        display:block;
+                                        padding:0;
+                                        margin-top:30px;
+                                        letter-spacing:0;
+                                        font-weight:$regular;
+                                        font-family: $primary-font;
+                                        text-shadow:0 1px 1px $dark-gray;
+                                    }
+
+                                    & .more-link {
+                                        border:0;
+                                        font-size:14px;
+                                        text-transform: uppercase;
+                                        display:table;
+                                        padding:10px 20px;
+                                        margin:30px 0 0 0;
+                                        line-height: 20px;
+                                        font-family:$primary-font;
+                                        font-weight:$regular;
+                                        border:1px solid $red-bg;
+                                        text-shadow:none;
+                                        letter-spacing: 0;
+                                        @include border-radius(3px);
+                                        @include transition (.3s ease-in-out);
+                                        &:hover {
+                                           
+                                                background:none;
+                                                color:$white-bg;
+                                                border:1px solid #ddd;
+                                                @include transition (.3s ease-in-out);
+                                            }
+                                     
+                                    }
+                                    
+                                }
+                                & .owl-prev {
+                                    padding: 0!important;
+                                    position: absolute;
+                                    width:38px;
+                                    height:38px;
+                                    line-height:38px;
+                                    top: 50%;
+                                    left:10px;
+                                    margin: 0 !important;
+                                    font-size: 18px !important;
+                                    background:none !important;
+                                    border:1px solid $white-bg;
+                                    @include transform(translate(0, -50%));
+                                    @include transition(.3s ease-in-out);
+                                    @include opacity(0.5);
+        
+                                }
+                                & .owl-next {
+                                    @extend .owl-prev;
+                                    right:10px;
+                                    left: inherit;
+                                    @include transition(.3s ease-in-out);
+                                }
+
+                                &:hover {
+                                    & .owl-prev {
+                                        left:20px;
+                                        background: rgba(255, 255, 255, 1) !important;
+                                        @include transition(.3s ease-in-out);
+                                        color:#222 !important;
+                                    }
+
+                                    & .owl-next {
+                                        color:#222 !important;
+                                        right:20px;
+                                        left:inherit;
+                                        @include transition(.3s ease-in-out);
+                                        background: rgba(255, 255, 255, 1) !important;
+                                    }
+                                }
+
+                                & .owl-item {
+                                    display:none;
+                                   
+                                }
+                                & .owl-loaded {
+                                
+                                    & .owl-item {
+                                        display:block;
+                                        & .item {
+                                            display:table;
+                                        }
+                                    }
+                                
+                                    }
+                            }
+                            
+                            .mainslider {
+                                
+                                & .caption-box {
+                                    position: absolute;
+                                    bottom: 0;
+                                    z-index: 98;
+                                    padding: 30px;
+                                    background: rgba(0, 0, 0, 0.5);
+                                    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.09) 15%, rgba(0, 0, 0, 0.85) 100%);
+                                    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.09) 15%, rgba(0, 0, 0, 0.85) 100%);
+                                    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.09) 15%, rgba(0, 0, 0, 0.85) 100%);
+                                    //filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#a6000000', GradientType=0);
+                                }
+                            }
+                            
+                            .icon-right {
+                                font-size: 22px;
+                                top: 2px;
+                                position: relative;
+                                margin-left: 6px;
+                            }
+                            
+                           
+                            
+                            
+                            
+                            // search and slide section
+                            .search-section {
+                                background: $text-color;
+                                height: 100vh;
+                            }
+                            
+                            .slide-section {
+                                @extend .search-section;
+                                background: $white-bg;
+                                padding: 0;
+                            }
+                            
+                           
+                            
+                         
+                            
+                            .owl-theme .owl-controls {
+                                height: 0;
+                                width: 100%;
+                                bottom: 0;
+                                top: inherit;
+                                position: static;
+                                margin: 0;
+                            }
+                            
+                            .owl-theme .owl-dots {
+                                bottom: 0;
+                                top: inherit;
+                                position: absolute;
+                                margin-top: 0;
+                            }
+                            
+                            .owl-dots .owl-dot span {
+                                width: 10px;
+                                height: 10px;
+                                background: #ededed;
+                            }
+                            
+                            .owl-dot.active span {
+                                background: $text-color !important;
+                                width: 10px !important;
+                                height: 10px !important;
+                            }
+
+                            .patra-patrika {
+                                margin-bottom:20px;
+                            }
+
+
+                            // paper slider
+                            .trend-slide {
+                                
+                            & .trend-box {
+                                & .trend-slider {
+                                    & .trend-item {
+                                            text-align:left;
+                                            display:none;
+                                            img {
+                                                height:176px;
+                                                object-fit:cover;
+                                            }
+                                        & .cat-name {
+                                            font-size:14px;
+                                            color:$blue-bg;
+                                            display:block;
+                                            margin:10px 0;
+                                        }
+
+                                        & .count-num {
+                                            font-size:54px;
+                                            color:#E5E5E5;
+                                            font-weight:$bold;
+                                            line-height:68px;
+
+                                        }
+
+                                        & .main-title {
+                                            font-size:15px;
+                                            line-height:22px;
+                                            display:block;
+                                            color:$link-color;
+                                            padding-right:15px;
+                                        }
+
+                                        a {
+                                            &:hover {
+                                                img {
+                                                    @include opacity(0.8);
+                                                }
+                                                & .count-num {
+                                                    color:#ccc;
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    
+                                         &.owl-loaded {
+                                            
+                                             & .owl-item {
+                                                 display:block;
+                                                 & .trend-item {
+                                                     display:flex;
+                                                 }
+                                             }
+                                            
+                                              }
+                                }
+                            }
+                            
+                        }
+
+                        .owl-theme .owl-controls {
+                            height:auto;
+                        }
+                        .owl-theme .owl-dots {
+                            position:relative;
+                            margin-top:30px;
+                            & .owl-dot {
+                                 span {
+                                     width:10px;
+                                     height:10px;
+                                     margin:5px 4px !important;
+                                     
+                                 }
+                                &.active {
+                                    span {
+                                        background:$green-bg !important;
+                                    }
+                                }
+                            }
+                        }
+
+
+                        // photo slider
+
+                        .photo-slider {
+                            &.owl-carousel {
+
+                            & .owl-stage {
+                                display: flex;
+                                align-items: center;
+                            }
+                        }
+                            & .active {
+                                &.center {
+                                & .item-news {
+                                    
+                                    @include transform(scale(1));
+                                    @include transition(0.5s all);
+                                    & .overlay-title {
+                                        opacity:1;
+
+                                    }
+                                    & .main-title {
+                                        opacity:1 !important;
+
+                                    }
+                                    figure {
+                                        &:before {
+                                            background:rgba(0, 0, 0, 0.2);
+                                        }
+
+                                        
+                                    }
+
+                                    img {
+                                        height:366px;
+                                    }
+                                }
+                            }
+                            }
+                            & .item-news {
+                                display:none;
+                                @include transform-style(preserve-3d);
+                                vertical-align: top;
+                                height: auto;
+                                max-width:$full-width;
+                                flex:0 0 $full-width;
+                                @include transform(scale(0.9));
+                                @include transition(0.5s all);
+                                img {
+                                    height:246px;
+                                }
+                                a {
+                                    width:$full-width;
+                                    &:hover {
+                                        & .main-title {
+                                            color:$white-bg;
+                                        }
+                                    }
+                                }
+                                & .overlay-title {
+                                    @include opacity(.5);
+                                    background:none;
+                                }
+                                & .main-title {
+                                    background:none;
+                                }
+
+                                & .cat-dec {
+                                    & .cat-name {
+                                        color:$white-bg;
+                                        &:before {
+                                            margin-right:10px;
+                                        }
+                                    }
+                                }
+                                figure {
+                                    &:before {
+                                        content:"";
+                                        width:$full-width;
+                                        height:$full-width;
+                                        position:absolute;
+                                        top:0;
+                                        left:0;
+                                        z-index:2;
+                                        background:rgba(0, 0, 0, 0.5);
+                                    }
+                                }
+                                }
+                            & .owl-item {
+                                display:none;
+                               
+                            }
+                                 &.owl-loaded {
+                                    
+                                     & .owl-item {
+                                         display:block;
+                                         & .item-news {
+                                             display:flex;
+                                         }
+                                     }
+                                    
+                                      }
+                        
+                        }
+
+                        // service slider
+
+                        .service-slider {
+                            margin-top:40px;
+                            & .items {
+                                img {
+                                    margin:0 auto;
+                                    max-height:60px;
+                                }
+                                & .main-title {
+                                    margin-top:20px;
+                                    color:$blue-bg;
+                                    
+                                }
+
+                                & .more-link {
+                                    display: block;
+                                    font-size: 12px;
+                                    text-transform: uppercase;
+                                    color: $red-bg;
+                                    margin-top: 5px;
+                                }
+
+                                & .description {
+                                    margin-bottom:0 !important;
+                                    margin-top:10px !important;
+                                }
+
+                                
+                            }
+                            
+                            .owl-theme .owl-controls {
+                                height: 0;
+                                width: 100%;
+                                bottom: 0;
+                                top: inherit;
+                                position: static;
+                                margin: 0;
+                            }
+                            .owl-theme .owl-dots {
+                                bottom: 40px;
+                                top: inherit;
+                            }
+                            .owl-dots .owl-dot span {
+                                width: 10px;
+                                height: 10px;
+                                background: $white-bg;
+                            }
+                            .owl-dot.active span {
+                                background: $white-bg !important;
+                                width: 10px !important;
+                                height: 10px !important;
+                            }
+                            .owl-item.active .captionbox {
+                                @include animation (fadeInUp 500ms linear 500ms both);
+                            }
+                           
+                            & .owl-prev {
+                                padding: 0!important;
+                                position: absolute;
+                                width:32px;
+                                height:32px;
+                                top: 50%;
+                                left: -50px;
+                                margin: 0 !important;
+                                font-size: 18px !important;
+                                background: rgba(38, 81, 156, 0.5) !important;
+                                @include transform(translate(0, -50%));
+                                @include transition(.3s ease-in-out);
+                                @include border-radius(100px);
+                                @include opacity(0);
+                            }
+                            & .owl-next {
+                                @extend .owl-prev;
+                                right: -50px;
+                                left: inherit;
+                                @include transition(.3s ease-in-out);
+                            }
+
+                            &:hover {
+                                & .owl-prev {
+                                    @include opacity(1);
+                                    left:-40px;
+                                    background: rgba(38, 81, 156, 1) !important;
+                                    @include transition(.3s ease-in-out);
+                                }
+
+                                & .owl-next {
+                                    right:-40px;
+                                    @include opacity(1);
+                                    left:inherit;
+                                    @include transition(.3s ease-in-out);
+                                    background: rgba(38, 81, 156, 1) !important;
+                                }
+                            }
+
+                            & .items {
+                                display:none;
+                            }
+                            & .owl-item {
+                                display:none;
+                                
+                               
+                            }
+                            &.owl-loaded {
+                                & .owl-item {
+                                    display:block;
+                                    & .items {
+                                        display:flex;
+                                    }
+                                }
+                            
+                                }
+
+                            
+                        
+                        }
+
+                        .service-slider-inner {
+                                @extend .service-slider;
+                        }
+
+                        // notice slider
+
+                        .notice-slider {
+                            padding-top:22px;
+                            padding-left:20px;
+                            float:left;
+                            & .items {
+                                & .main-title {
+                                    font-size:14px;
+                                    color:$white-bg;
+                                    font-weight:$regular;
+                                    line-height:18px;
+                                    display:block;
+                                }
+
+                                a {
+                                    &:hover {
+                                        & .main-title {
+                                            text-decoration:underline;
+                                        }
+                                    }
+                                }
+                            }
+
+                            
+                        }
+
+                        .view-more {
+                            float:left;
+                            margin:24px 0 0 20px;
+                            text-transform:uppercase;
+                            
+                           
+                            a {
+                                font-size:11px;
+                                color:$white-bg;
+                                & .left-icon {
+                                    position:relative;
+                                    top:0;
+                                    margin-left:5px;
+                                }
+                                &:hover {
+                                    text-decoration:underline;
+                                }
+                                
+                            }
+                        }
+
+
+                        // notice slider
+
+                        .notice-slider {
+                            width:40%;
+                            & .items {
+                                display:none;
+                                background:$blue-bg;
+                            }
+                            & .owl-item {
+                                display:none;
+                                
+                               
+                            }
+                            &.owl-loaded {
+                                & .owl-item {
+                                    display:block;
+                                    & .items {
+                                        display:flex;
+                                    }
+                                }
+                            
+                                }
+                        }
+
+                        // partner slider
+
+                         // service slider
+
+                         .partner-slider {
+                             padding:0 15px;
+                            & .items {
+                                border:1px solid #ddd;
+                                padding:10px !important;
+                                justify-content: center;
+                                img {
+                                    margin:0 auto;
+                                    max-height:60px;
+                                    max-width:$full-width;
+                                    width:auto;
+                                }
+                                & .main-title {
+                                    margin-top:20px;
+                                    color:$blue-bg;
+                                    
+                                }
+
+                                & .more-link {
+                                    display: block;
+                                    font-size: 12px;
+                                    text-transform: uppercase;
+                                    color: $red-bg;
+                                    margin-top: 5px;
+                                }
+
+                                & .description {
+                                    margin-bottom:0 !important;
+                                    margin-top:10px !important;
+                                }
+
+                                
+                            }
+                            
+                            .owl-controls {
+                                height: 0;
+                                width: 100%;
+                                bottom: 0;
+                                top: inherit;
+                                position: static;
+                                margin: 0;
+                            }
+                         .owl-dots {
+                                bottom:0;
+                                top: inherit;
+                                margin-top:0;
+                               
+                            }
+                            .owl-dots .owl-dot span {
+                                width: 10px;
+                                height: 10px;
+                                background: #ddd;
+                            }
+                            .owl-dot.active span {
+                                background: $white-bg !important;
+                                width: 10px !important;
+                                height: 10px !important;
+                            }
+                            .owl-item.active .captionbox {
+                                @include animation (fadeInUp 500ms linear 500ms both);
+                            }
+                           
+                            & .owl-prev {
+                                padding: 0!important;
+                                position: absolute;
+                                width:32px;
+                                height:32px;
+                                top: 50%;
+                                left: -50px;
+                                margin: 0 !important;
+                                font-size: 18px !important;
+                                background: rgba(38, 81, 156, 0.5) !important;
+                                @include transform(translate(0, -50%));
+                                @include transition(.3s ease-in-out);
+                                @include border-radius(100px);
+                                @include opacity(0);
+                            }
+                            & .owl-next {
+                                @extend .owl-prev;
+                                right: -50px;
+                                left: inherit;
+                                @include transition(.3s ease-in-out);
+                            }
+
+                            &:hover {
+                                & .owl-prev {
+                                    @include opacity(1);
+                                    left:-40px;
+                                    background: rgba(38, 81, 156, 1) !important;
+                                    @include transition(.3s ease-in-out);
+                                }
+
+                                & .owl-next {
+                                    right:-40px;
+                                    @include opacity(1);
+                                    left:inherit;
+                                    @include transition(.3s ease-in-out);
+                                    background: rgba(38, 81, 156, 1) !important;
+                                }
+                            }
+
+                            & .items {
+                                display:none;
+                            }
+                            & .owl-item {
+                                display:none;
+                                
+                               
+                            }
+                            &.owl-loaded {
+                                & .owl-item {
+                                    display:block;
+                                    & .items {
+                                        display:flex;
+                                       
+                                    }
+                                }
+                            
+                                }
+
+                            
+                        
+                        }
+// testimonial slider
+.testimonial-slider {
+    & .item {
+        display:none;
+    }
+    & .owl-item {
+        display:none;
+       
+    }
+         &.owl-loaded {
+            
+             & .owl-item {
+                 display:block;
+                 & .item {
+                     display:table;
+                     flex-wrap:wrap;
+                 }
+             }
+            
+              }
+}
+
+// sector slider
+
+.sector-slider {
+   
+    .owl-controls {
+        height: 0;
+        width: 100%;
+        bottom: 0;
+        top: inherit;
+        position: static;
+        margin: 0;
+    }
+    .owl-dots {
+        bottom: 40px;
+        top: inherit;
+    }
+    .owl-dots .owl-dot span {
+        width: 10px;
+        height: 10px;
+        background: #ddd;
+    }
+    .owl-dot.active span {
+        background: $white-bg !important;
+        width: 10px !important;
+        height: 10px !important;
+    }
+    .owl-item.active .captionbox {
+        @include animation (fadeInUp 500ms linear 500ms both);
+    }
+   
+    & .owl-prev {
+        padding: 0!important;
+        position: absolute;
+        width:32px;
+        height:32px;
+        top: 50%;
+        left: -15px;
+        margin: 0 !important;
+        font-size: 18px !important;
+        background:$white-bg !important;
+        @include transform(translate(0, -50%));
+        @include transition(.3s ease-in-out);
+        @include border-radius(100px);
+        border:1px solid #ccc !important;
+        color:#707070 !important;
+        font-size:12px !important;
+
+
+    }
+    & .owl-next {
+        @extend .owl-prev;
+        right: -15px;
+        left: inherit;
+        @include transition(.3s ease-in-out);
+    }
+
+    &:hover {
+        & .owl-prev {
+            @include transition(.3s ease-in-out);
+        }
+
+        & .owl-next {
+
+            left:inherit;
+            @include transition(.3s ease-in-out);
+        }
+    }
+
+    & .items {
+        display:none;
+    }
+    & .owl-item {
+        display:none;
+        
+       
+    }
+    &.owl-loaded {
+        & .owl-item {
+            display:block;
+            & .items {
+                display:flex;
+            }
+        }
+    
+        }
+
+}
+
+// sector slider
+
+.team-slider {
+    .owl-controls {
+        height: 0;
+        width: 100%;
+        bottom: 0;
+        top: inherit;
+        position: static;
+        margin: 0;
+    }
+    .owl-dots {
+        bottom:0;
+        top: inherit;
+        margin-top:0;
+    }
+    .owl-dots .owl-dot span {
+        width: 10px;
+        height: 10px;
+        background: #ddd;
+    }
+    .owl-dot.active span {
+        background: $white-bg !important;
+        width: 10px !important;
+        height: 10px !important;
+    }
+    .owl-item.active .captionbox {
+        @include animation (fadeInUp 500ms linear 500ms both);
+    }
+   
+    & .owl-prev {
+        padding: 0!important;
+        position: absolute;
+        width:32px;
+        height:32px;
+        top: 40%;
+        left: -15px;
+        margin: 0 !important;
+        font-size: 18px !important;
+        background:$white-bg !important;
+        @include transform(translate(0, -50%));
+        @include transition(.3s ease-in-out);
+        @include border-radius(100px);
+        border:1px solid #ccc !important;
+        color:#707070 !important;
+        font-size:12px !important;
+
+
+    }
+    & .owl-next {
+        @extend .owl-prev;
+        right: -15px;
+        left: inherit;
+        @include transition(.3s ease-in-out);
+    }
+
+    &:hover {
+        & .owl-prev {
+            @include transition(.3s ease-in-out);
+        }
+
+        & .owl-next {
+
+            left:inherit;
+            @include transition(.3s ease-in-out);
+        }
+    }
+
+    & .team-item {
+        display:none;
+    }
+    & .owl-item {
+        display:none;
+        
+       
+    }
+    &.owl-loaded {
+        & .owl-item {
+            display:block;
+            & .team-item {
+                display:flex;
+            }
+        }
+    
+        }
+
+}
+
+// artists slider
+
+.artists-slider {
+    margin-top:40px;
+    .owl-theme .owl-controls {
+        height: 0;
+        width: 100%;
+        bottom: 0;
+        top: inherit;
+        position: static;
+        margin: 0;
+    }
+    .owl-theme .owl-dots {
+        bottom: 40px;
+        top: inherit;
+    }
+    .owl-dots .owl-dot span {
+        width: 10px;
+        height: 10px;
+        background: $white-bg;
+    }
+    .owl-dot.active span {
+        background: $white-bg !important;
+        width: 10px !important;
+        height: 10px !important;
+    }
+    .owl-item.active .captionbox {
+        @include animation (fadeInUp 500ms linear 500ms both);
+    }
+   
+    & .owl-prev {
+        padding: 0!important;
+        position: absolute;
+        width:32px;
+        height:32px;
+        top: 35%;
+        left:-20px;
+        margin: 0 !important;
+        line-height: 33px;
+        font-size: 10px !important;
+        background: rgba(254, 55, 97, 0.5) !important;
+        @include transform(translate(0, -50%));
+        @include transition(.3s ease-in-out);
+        @include border-radius(100px);
+    }
+    & .owl-next {
+        @extend .owl-prev;
+        right:-20px;
+        left: inherit;
+        @include transition(.3s ease-in-out);
+    }
+
+    &:hover {
+        & .owl-prev {
+           
+            background: rgba(254, 55, 97, 1) !important;
+            @include transition(.3s ease-in-out);
+        }
+
+        & .owl-next {
+
+            left:inherit;
+            @include transition(.3s ease-in-out);
+            background: rgba(254, 55, 97, 1) !important;
+        }
+    }
+
+    & .items {
+        display:none;
+    }
+    & .owl-item {
+        display:none;
+        
+       
+    }
+    &.owl-loaded {
+        & .owl-item {
+            display:block;
+            & .items {
+                display:flex;
+            }
+        }
+    
+        }
+
+}
+
+// featured slider
+
+.featured-slider {
+    @extend .artists-slider;
+}
+
+
+// rj .artists-slider
+.rjs-slider {
+    @extend .artists-slider;
+    & .items {
+        img {
+            height:150px !important;
+        }
+    }
+
+    & .owl-next {
+        top:27%;
+    }
+    & .owl-prev {
+        top:27%;
+    }
+}
+
+// featured slider
+
+.artist-slider-right {
+    @extend .artists-slider;
+    margin-top:0;
+    & .items {
+        img {
+            width: $full-width;
+            float:left;
+            height:264px;
+            object-fit:cover;
+            margin-bottom:15px;
+        }
+
+        & .main-title {
+            color:#aaa;
+            display:block;
+            font-size:16px;
+            line-height:22px;
+            padding:20px 20px 0 20px;
+        }
+
+        & .description {
+            color:#989898;
+            display:block;
+            font-size:14px;
+            line-height:22px;
+            margin-top:5px;
+            font-family: $primary-font;
+            padding:0 20px 20px 20px !important;
+        }
+
+        & .more-btn {
+            background:none;
+            border:1px solid $red-bg;
+            display:table;
+            margin-top:15px;
+            margin-left:20px;
+            padding:5px 10px;
+            text-transform:uppercase;
+            font-weight:$bold;
+            color:$red-bg;
+            line-height:18px;
+
+            &:hover {
+                background:$red-bg;
+                color:$white-bg;
+            }
+        }
+
+        a {
+            &:hover {
+                & .main-title {
+                    color:$white-bg;
+                }
+            }
+        }
+    }
+
+    & .owl-dots {
+        & .owl-dot {
+            span {
+                width:5px;
+                height:5px;
+                @include transition(.3s ease-in-out);
+                
+            }
+
+            &.active {
+                span {
+                    position:relative;
+                    top:2px;
+                    @include transition(.3s ease-in-out);
+                }
+            }
+        }
+    }
+}
+
+// prog slider
+
+.prog-slider-right {
+    @extend .artist-slider-right;
+}
+                      
